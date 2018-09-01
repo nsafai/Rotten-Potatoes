@@ -1,4 +1,5 @@
 # Rotten Potatoes
+Following this [tutorial](https://www.makeschool.com/academy/track/rotten-potatoes---movie-reviews-with-express-js/tutorial/bootstrap-an-express-project)
 
 ## User Stories
 

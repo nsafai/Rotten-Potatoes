@@ -6,10 +6,21 @@ router.get('/', function(req, res, next) {
   res.render('index', { greeting: 'Hola', name: 'amigo', title: 'Rotten Potatoes' });
 });
 
+
+let testArray = [
+  { data: 'Snickersnee' },
+  { data: 'Cattywampus' },
+  { data: 'Gardyloo' },
+  { data: 'Taradiddle' },
+  { data: 'Bumfuzzle' }
+];
+
 // create new route below
 router.get('/test', (req, res) => {
-  // render Handlebars template here...
-    res.render('test', { data: 'test' })
+  res.render('test', {
+    data: 'test',
+    test_items:testArray
+  })
 });
 
 module.exports = router;

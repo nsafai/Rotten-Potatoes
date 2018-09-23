@@ -8,6 +8,17 @@ var indexRouter = require('./routes/index');
 
 var app = express();
 
+const mongoose = require('mongoose');
+const mongoURI = 'mongodb://nico:password11@ds127490.mlab.com:27490/rottenpotatoes'; // NO PARENTHESES
+
+// connect our app with our database
+mongoose.connect(mongoURI)
+mongoose.Promise = global.Promise;
+let db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+module.exports = app;
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
